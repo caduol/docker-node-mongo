@@ -8,7 +8,8 @@ const cors = require('cors')
 
 // Database - como a API de Promise do mongoose esta depreciada, entao esta sendo feito uma atribuicao da API de promise do Node
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://bd/mydb', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://db/mydb')
+// , { useNewUrlParser: true, useUnifiedTopology: true }
 
 // test
 server.get('/', (req, res, next) => res.send('Backend'))
